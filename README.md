@@ -12,4 +12,4 @@ Every solution contains a main function which invokes a first and second method,
 
 ## TODO
 
-Move the input and source files into separate folders to keep the root clean
+- Move the input and source files into separate folders to keep the root clean
