@@ -1,3 +1,6 @@
+from functools import cache
+from collections import defaultdict
+
 def parse():
     stones = []
 
@@ -9,30 +12,42 @@ def parse():
 
     return stones
 
+@cache
+def apply_rule(kind):
+    if kind == 0:
+        return (1, None)
+    elif len(str(kind)) & 1 == 0:
+        str_kind = str(kind)
+        m = len(str_kind) // 2
+
+        return (int(str_kind[:m]), int(str_kind[m:]))
+    else:
+        return (kind * 2024, None)
+
 
 def first(stones, k):
+    counter = defaultdict(int)
 
-    for _ in range(k):
-        step = []
+    for stone in stones:
+        counter[stone] += 1
 
-        for stone in stones:
-            if stone == 0:
-                step.append(1)
-            elif len(str(stone)) & 1 == 0:
-                str_stone = str(stone)
-                m = len(str_stone) // 2
+    for step in range(k):
+        step_counter = defaultdict(int)
 
-                step.append(int(str_stone[:m]))
-                step.append(int(str_stone[m:]))
-            else:
-                step.append(stone * 2024)
+        for key, val in counter.items():
+            kind, kind2 = apply_rule(key)
 
-        stones = step
+            step_counter[kind] += val
 
-    return len(stones)
+            if kind2 != None:
+                step_counter[kind2] += val
+
+        counter = step_counter
+
+    return sum(counter.values())
 
 if __name__ == "__main__":
     stones = parse()
 
-    print(first(stones[:], 25))
-    print(first(stones[:], 75))
+    print(first(stones, 25))
+    print(first(stones, 75))
