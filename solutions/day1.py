@@ -4,7 +4,7 @@ def first_part():
     l1 = []
     l2 = []
 
-    with open('day1_1.txt', 'r') as f:
+    with open('../inputs/1.txt', 'r') as f:
         lines = f.readlines()
 
         for line in lines:
@@ -26,7 +26,7 @@ def second_part():
     l1 = set()
     l2 = defaultdict(int)
 
-    with open('day1_1.txt', 'r') as f:
+    with open('../inputs/1.txt', 'r') as f:
         lines = f.readlines()
 
         for line in lines:

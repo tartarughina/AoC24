@@ -5,7 +5,7 @@ def parse():
     occupied = set()
     rows = 0
     cols = 0
-    with open('day8.txt', 'r') as f:
+    with open('../inputs/8.txt', 'r') as f:
         lines = f.readlines()
 
         rows = len(lines)

@@ -20,7 +20,7 @@ def check_decreasing(line) -> bool:
     return True
 
 def first():
-    with open('day2_1.txt', 'r') as f:
+    with open('../inputs/2.txt', 'r') as f:
         lines = f.readlines()
 
         safe = 0
@@ -97,7 +97,7 @@ def check_bad_level(line) -> bool:
     return True
 
 def second():
-    with open('day2_1.txt', 'r') as f:
+    with open('../inputs/2.txt', 'r') as f:
         lines = f.readlines()
 
         safe = 0

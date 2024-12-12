@@ -1,7 +1,7 @@
 def parse():
     ret = []
 
-    with open('day7.txt', 'r') as f:
+    with open('../inputs/7.txt', 'r') as f:
         lines = f.readlines()
 
         for line in lines:

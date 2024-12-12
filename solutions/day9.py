@@ -2,7 +2,7 @@ def parse():
     disk = []
     id = 0
 
-    with open('day9.txt', 'r') as f:
+    with open('../inputs/9.txt', 'r') as f:
         lines = f.readlines()
 
         for line in lines:

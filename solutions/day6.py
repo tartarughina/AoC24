@@ -8,7 +8,7 @@ def parse():
     rows = None
     cols = None
 
-    with open('day6.txt', 'r') as f:
+    with open('../inputs/6.txt', 'r') as f:
         lines = f.readlines()
 
         rows = len(lines)

@@ -4,7 +4,7 @@ from collections import defaultdict
 def parse():
     stones = []
 
-    with open('day11.txt', 'r') as f:
+    with open('../inputs/11.txt', 'r') as f:
 
 
         for line in f.readline().strip().split(' '):

@@ -1,7 +1,7 @@
 def parse():
     grid = []
 
-    with open('day10.txt', 'r') as f:
+    with open('../inputs/10.txt', 'r') as f:
         lines = f.readlines()
 
         for line in lines:
